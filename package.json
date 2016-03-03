@@ -4,11 +4,12 @@
   "description": "React Native Talk",
   "main": "index.js",
   "scripts": {
+    "create-build-dirs": "mkdir -p build/js build/css",
     "start": "node scripts/server.js",
     "build-js": "bash scripts/build-js.sh",
     "build-less": "lessc --silent src/less/style.less build/css/style.css",
     "build-html": "cp src/index.html build/index.html",
-    "build": "npm run build-js && npm run build-less && npm run build-html"
+    "build": "npm run create-build-dirs && npm run build-js && npm run build-less && npm run build-html"
   },
   "author": "Jake Howard",
   "devDependencies": {
