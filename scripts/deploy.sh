@@ -13,7 +13,8 @@ git config --global user.name "RealOrangeOne"
 
 mkdir built_website
 # Using token clone gh-pages branch
-git clone --quiet --branch=$BRANCH git@github.com:realorangeone/react-native-intro-dev-meeting built_website
+
+git clone --branch=$BRANCH https://${GH_TOKEN}@github.com/RealOrangeOne/react-native-intro-dev-meeting.git built_website
 
 # Go into directory and copy data we're interested in to that directory
 cd built_website
