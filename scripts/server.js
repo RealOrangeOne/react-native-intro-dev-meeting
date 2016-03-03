@@ -1,9 +1,10 @@
 var connect = require('connect');
 var serveStatic = require('serve-static');
 
-const serveDir = __dirname + '/../build';
+const SERVE_DIR = __dirname + '/../build';
+const PORT = 8070;
 
 
-connect().use(serveStatic(serveDir)).listen(8080, function(){
-    console.log('Server running on 8080...');
+connect().use(serveStatic(SERVE_DIR)).listen(PORT, function(){
+    console.log('Server running on', PORT, '...');
 });
