@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-set -e
-
-
 BRANCH=gh-pages
 DIST_FOLDER=build
 
