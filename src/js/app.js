@@ -1,16 +1,23 @@
-import Reveal from 'reveal.js'
+/* global hljs */
+import Reveal from 'reveal.js';
 
 window.Reveal = Reveal;
 
 Reveal.initialize({
-				controls: true,
-				progress: true,
-        history: true,
-				center: true,
+  controls: true,
+  progress: true,
+  history: true,
+  center: true,
 
-				transition: 'slide',
+  transition: 'slide',
 
-				dependencies: [
-					{ src: 'js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-				]
-			});
+  dependencies: [
+    {
+      src: 'js/plugin/highlight/highlight.js',
+      async: true,
+      callback: function() {
+        hljs.initHighlightingOnLoad();
+      }
+    },
+  ]
+});
