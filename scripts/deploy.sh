@@ -6,7 +6,7 @@ set -e
 BRANCH=gh-pages
 DIST_FOLDER=build
 
-echo -e "Starting deployment to Github Pages\n"
+echo "Starting deployment to Github Pages"
 
 git config --global user.email "git@theorangeone.net"
 git config --global user.name "RealOrangeOne"
@@ -25,6 +25,6 @@ git add -f .
 git commit -m "Deployment - build $CIRCLE_BUILD_NUM"
 git push -fq origin $BRANCH
 
-echo -e "Deployment completed.\n"
+echo "Deployment completed."
 
 rm -rf built_website

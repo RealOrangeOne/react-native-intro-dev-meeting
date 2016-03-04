@@ -18,4 +18,5 @@ deployment:
   master:
     branch: master
     commands:
+      - ./scripts/publish.sh
       - ./scripts/deploy.sh
