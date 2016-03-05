@@ -8,11 +8,69 @@
   <body>
     <div class="reveal">
       <div class="slides">
-        <section>Single Horizontal Slide</section>
         <section>
-          <section>Vertical Slide 1</section>
+          <h2>React Native</h2>
+          <h4><i>It's like ReactJS, but completely different!</i></h4>
+        </section>
+        <section>
           <section>
-            <pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
+            <h3>How it works</h3>
+            <p class="fragment"><i>Magic!</i></p>
+          </section>
+          <section>
+            It looks like reactJS...
+            <pre><code>
+              class Foo extends React.Component {
+                render() {
+                  return (
+                    &lt;a href="//google.com"&gt;
+                      &lt;p&gt;some text&lt;/p&gt;
+                    &lt;/a&gt;
+                  );
+                }
+              }
+            </code></pre>
+            <pre class="fragment"><p>Not entirely...</p><code>
+              class FooNative extends React.Component {
+                render(){
+                  return (
+                    &lt;TouchableHighlight onPress={this._handlePress}&gt;
+                      &lt;Text&gt;some text&lt;/Text&gt;
+                    &lt;/TouchableHighlight&gt;
+                  );
+                }
+              }
+            </code></pre>
+          </section>
+          <section>
+            <h3>HTML Components, Native equivalent</h3>
+            <ul>
+              <li class="fragment">p &rarr; Text</li>
+              <li class="fragment">input &rarr; TextInput</li>
+              <li class="fragment">checkbox &rarr; Switch</li>
+              <li class="fragment">div &rarr; View</li>
+              <li class="fragment">button &rarr;
+                <ul>
+                  <li class="fragment">TouchableHighlight</li>
+                  <li class="fragment">TouchableWithoutFeedback</li>
+                  <li class="fragment">TouchableNativeFeedback</li>
+                  <li class="fragment">TouchableOpacity</li>
+                </ul>
+              </li>
+              <li class="fragment">a &rarr; ¯\_(ツ)_/¯</li>
+            </ul>
+          </section>
+          <section>
+            <h3>Better HTML Components!</h3>
+            <ul>
+              <li class="fragment">ListView</li>
+              <li class="fragment">MapView</li>
+              <li class="fragment">Navigator</li>
+              <li class="fragment">Picker</li>
+              <li class="fragment">ProgressBars</li>
+            </ul>
+          </section>
+          <section data-background="http://cdn.meme.am/instances/500x/67273506.jpg" data-background-size="contain">
           </section>
         </section>
       </div>
