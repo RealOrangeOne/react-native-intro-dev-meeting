@@ -19,7 +19,7 @@
           </section>
           <section>
             It looks like reactJS...
-            <pre><code>
+            <pre><code class="javascript">
               class Foo extends React.Component {
                 render() {
                   return (
@@ -30,7 +30,7 @@
                 }
               }
             </code></pre>
-            <pre class="fragment"><p>Not entirely...</p><code>
+            <pre class="fragment"><p>Not entirely...</p><code class="javascript">
               class FooNative extends React.Component {
                 render(){
                   return (
@@ -72,6 +72,89 @@
           </section>
           <section data-background="http://cdn.meme.am/instances/500x/67273506.jpg" data-background-size="contain">
           </section>
+        </section>
+        <section>
+          <section>
+            <h3>Building with <i>react-native</i></h3>
+          </section>
+          <section>
+            <pre><code class="javascript">
+              import React from 'react-native';
+              const { Image, Text, View, AppRegistry } = React;
+
+              class App extends React.Component{
+                render() {
+                  return (
+                    &lt;View style={styles.row}&gt;
+                      &lt;Image source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} style={styles.image} /&gt;
+                      &lt;View style={styles.text}&gt;
+                        &lt;Text style={styles.title}&gt;React Native &lt;/Text&gt;
+                        &lt;Text style={styles.subtitle}&gt;Build high quality mobile apps using React &lt;/Text&gt;
+                      &lt;/View&gt;
+                    &lt;/View&gt;
+                  );
+                }
+              });
+              AppRegistry.registerComponent('Pied_Piper', () => App);
+            </code></pre>
+          </section>
+          <section>
+            <h3>Run it!</h3>
+            <pre><code class="bash">
+              react-native run-android    # (or through XCode for iOS)
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          So,
+          <h3 class="fragment">How <i>should</i> we be using react-native?</h3>
+        </section>
+        <section>
+          <section>
+            <h3>Navigation</h3>
+            <ol>
+              <li>Navigator</li>
+              <li><i>react-native-router-flux</i></li>
+            </ol>
+          </section>
+          <section>
+            <h3>Navigator - Built into React-Native</h3>
+            <pre class="fragment"><code class="javascript">
+              &lt;Navigator
+                  initialRoute={Routes.Login()}
+                  renderScene={this.renderScene}
+                  orientation={this.state.orientation}
+                  navigationBar={
+                    &lt;Navigator.NavigationBar
+                        style={styles.navbar}
+                        routeMapper={RouteMapper} /&gt;
+                  }
+              /&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3><i>react-native-router-flux</i></h3>
+            <pre class="fragment"><code class="html">
+              &lt;Router navigationBarStyle={styles.navbar}&gt;
+                  &lt;Schema name="default" sceneConfig={Navigator.SceneConfigs.FloatFromRight}
+                      renderTitle={() => &lt;NavbarTitle /&gt;} /&gt;
+                  &lt;Schema name="tab" type="switch" /&gt;
+                  &lt;Route name="login" component={Login} schema="default"
+                      initial={true} hideNavBar={true} wrapRouter={true} /&gt;
+                  &lt;Route name="main" type="replace" schema="default"&gt;
+                      &lt;Router footer={TabBar} tabBarStyle={styles.tabbar}&gt;
+                          &lt;Route name="myclasses" component={MyClasses} schema="tab" icon={ClassesIcon} /&gt;
+                          &lt;Route name="myschedule" component={MySchedule} schema="tab" icon={MyScheduleIcon} /&gt;
+                          &lt;Route name="parkschedule" component={ParkSchedule} schema="tab" icon={ParkScheduleIcon} /&gt;
+                      &lt;/Router&gt;
+                  &lt;/Route&gt;
+              &lt;/Router&gt;
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <h5>So, now the tricky bit...</h5>
+          <h3 class="fragment"><strong>Tests!</strong></h3>
         </section>
       </div>
     </div>
