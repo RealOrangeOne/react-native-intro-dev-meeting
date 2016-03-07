@@ -139,8 +139,6 @@
                   &lt;Schema name="default" sceneConfig={Navigator.SceneConfigs.FloatFromRight}
                       renderTitle={() => &lt;NavbarTitle /&gt;} /&gt;
                   &lt;Schema name="tab" type="switch" /&gt;
-                  &lt;Route name="login" component={Login} schema="default"
-                      initial={true} hideNavBar={true} wrapRouter={true} /&gt;
                   &lt;Route name="main" type="replace" schema="default"&gt;
                       &lt;Router footer={TabBar} tabBarStyle={styles.tabbar}&gt;
                           &lt;Route name="tab1" component={Tab1} schema="tab" icon={TabIcon} /&gt;
