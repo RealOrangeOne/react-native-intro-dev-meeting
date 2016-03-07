@@ -153,8 +153,91 @@
           </section>
         </section>
         <section>
+          <section>
+            <h3>Styling</styles>
+          </section>
+          <section>
+            <h3>How are styles handled?</h3>
+            <pre class="fragment"><code class="javascript">
+              const styles = StyleSheet.create({
+                  darkFont: {
+                      backgroundColor: '#FF7F00',
+                  },
+              });
+            </code></pre>
+            <pre class="fragment"><code class="html">
+              &lt;Text style={styles.darkFont}&gt;Some Content&lt;/Text&gt;
+            </code></pre>
+          </section>
+          <section>
+            <h3>Global Styles?</h3>
+            <ul>
+              <li class="fragment">Not necessary</li>
+              <li class="fragment">Not easy:
+                <ul>
+                  <li class="fragment">Stylesheet is immutable, and arbitrary</li>
+                  <li class="fragment">Merging stylesheets isnt easy</li>
+                  <li class="fragment">Constant refining of stylesheets</li>
+                </ul>
+              </li>
+              <li class="fragment">You don't need to!
+                <ul>
+                  <li class="fragment">Unlikely</li>
+                  <li class="fragment">Defeats the point of components</li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>How to do global styles?</h3>
+            <pre class="fragment"><code class="javascript">
+              export function extendStylesheet(stylesheet) {
+                  return StyleSheet.create(_.merge(globalStyles, stylesheet));
+              }
+            </code></pre>
+          </section>
+          <section>
+            <h3>Variables and Styles</h3>
+            <ol>
+              <li class="fragment">Immutable.js</li>
+              <li class="fragment">Const exports</li>
+            </ol>
+            <pre class="fragment"><code class="javascript">
+              export default Map({
+                FONT_COLOUR: '#FF7F00',
+                FOOTER_HEIGHT: 50
+              });
+            </code></pre>
+            <pre class="fragment"><code class="javascript">
+              export const FONT_COLOUR = '#FF7F00';
+              export const FOOTER_HEIGHT = 50;
+            </code></pre>
+            <pre class="fragment"><code class="javascript">
+              const styles = StyleSheet.create({
+                  darkFont: {
+                      backgroundColor: GlobalStyles.get('FONT_COLOUR'),
+                  },
+              });
+            </code></pre>
+          </section>
+        </section>
+        <section>
+          <section>
           <h5>So, now the tricky bit...</h5>
           <h3 class="fragment"><strong>Tests!</strong></h3>
+        </section>
+        <section>
+          <h3>Native Components</h3>
+          <ul>
+            <li class="fragment"><i>react-native-mock</i>
+              <ul>
+                <li class="fragment">Doesn't actually render a component, just <i>null</i> instead</li>
+                <li class="fragment"><q>Wait... Is this actually a terrible idea? I don't know. Maybe.</q></li>
+                <li class="fragment">But, does it work? <span class="fragment"><strong>Yes</strong>, rather well actually</span></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
         </section>
       </div>
     </div>
