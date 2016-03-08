@@ -153,6 +153,54 @@
         </section>
         <section>
           <section>
+            <h3>Native Code</h3>
+            <p>Has to be done more often than you would think!</p>
+          </section>
+          <section>
+            <pre class="fragment">MyNativeModule.java<code class="java">
+              @Override
+              public String getName() {
+                return "NativeStuff";
+              }
+              @ReactMethod
+              public void doCoolStuff() {
+                  System.out.println("Look, Cool things!");
+              }
+            </code></pre>
+            <pre class="fragment">MyNativePackage.java<code class="java">
+              @Override
+              public List&lt;NativeModule&gt; createNativeModules(
+                                          ReactApplicationContext reactContext) {
+                List&lt;NativeModule&gt; modules = new ArrayList&lt;&gt;();
+                modules.add(new SpotifyModule(reactContext, mActivity));
+                return modules;
+              }
+            </code></pre>
+            <pre class="fragment">MainActivity.java<code class="java">
+              @Override
+              protected List&lt;ReactPackage&gt; getPackages() {
+                  return Arrays.&lt;ReactPackage&gt;asList(
+                      new MainReactPackage(),
+                      new MyNativePackage()
+                  );
+              }
+            </code></pre>
+          </section>
+          <section>
+            <pre><code class="javascript">
+              import { NativeModules } from 'react-native';
+              NativeModules.NativeStuff.doCoolStuff();
+            </code></pre>
+            <ul>
+              <li class="fragment">Fully Native</li>
+              <li class="fragment">Asyncronous by default</li>
+              <li class="fragment">ReactMethods must be void - They cannot return</li>
+              <li class="fragment">Support for callbacks and promices</li>
+            </ul>
+          </section>
+        </section>
+        <section>
+          <section>
             <h3>Styling</styles>
           </section>
           <section>
