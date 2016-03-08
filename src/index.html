@@ -217,7 +217,7 @@
             </code></pre>
           </section>
           <section>
-            <h3>Global Styles?</h3>
+            <h3>Global Styles? <span class="fragment">No</span></h3>
             <ul>
               <li class="fragment">Not necessary</li>
               <li class="fragment">Not easy:
@@ -236,7 +236,7 @@
             </ul>
           </section>
           <section>
-            <h3>How to do global styles?</h3>
+            <h3>If you have to do global styles...</h3>
             <pre class="fragment"><code class="javascript">
               export function extendStylesheet(stylesheet) {
                   return StyleSheet.create(_.merge(globalStyles, stylesheet));
@@ -284,8 +284,8 @@
                 </ul>
               </li>
             </ul>
-            <pre class="fragment"><code class="javascript">
-              mockery.registerMock('react-native-router-flux', require(MOCKS_DIR + '/react-native-router-flux'));
+            <pre class="fragment">test-helper.js<code class="javascript">
+              require('react-native-mock/mock');
             </code></pre>
           </section>
           <section>
@@ -295,7 +295,9 @@
               <li class="fragment">Platform</li>
               <li class="fragment">resolveAssetSource</li>
             </ul>
-
+            <pre class="fragment">test-helper.js<code class="javascript">
+              mockery.registerMock('react-native-router-flux', require(MOCKS_DIR + '/react-native-router-flux'));
+            </code></pre>
           </section>
           <section>
             <h3>Testing Tools</h3>
@@ -313,28 +315,33 @@
             <li class="fragment">Is it fast? <span class="fragment">God Yes!</span></li>
             <li class="fragment">Is it native? <span class="fragment">Yes!</span></li>
             <li class="fragment">Does it beat cordova + React.JS? <span class="fragment">Yes!</span></li>
+            <span class="fragment">But...</span>
             <li class="fragment">Does it fully support iOS and Android? <span class="fragment">No</span></li>
             <li class="fragment">Is it well documented? <span class="fragment">Not even close!</span></li>
-            <li class="fragment">Is it easy to test? <span class="fragment">┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻</span></li>
+            <li class="fragment">Is it easy to test? <span class="fragment">┻━┻ ︵ヽ(`Д´)ﾉ︵ ┻━┻</span>  <span class="fragment"><i>(No)</i></span></li>
           </ul>
-          <h5 class="fragment">But, <i>React-Native</i> is really close!</h5>
+          <h5 class="fragment">But, it's getting better!</h5>
         </section>
         <section>
           <h3>So, Where Next?</h3>
           <p class="fragment">Contributing</p>
-          <ul class="fragment">
-            <li><i class="strike">react-native</i></li>
-            <li><i>react-native-mock</i></li>
-            <li><i>react-native-router-flux</i></li>
-            <li><i>enzyme</i></li>
+          <ul>
+            <li class="fragment"><i class="strike">react-native</i></li>
+            <div class="fragment">
+              <li><i>react-native-mock</i></li>
+              <li><i>react-native-router-flux</i></li>
+              <li><i>enzyme</i></li>
+            </div>
           </ul>
-          <p class="fragment">Tests for Native Code</p>
+          <p class="fragment">Tests for Native Code?</p>
         </section>
         <section>
           <h5 class="smallish"><a href="http://realorangeone.github.io/react-native-intro-dev-meeting">http://realorangeone.github.io/react-native-intro-dev-meeting</a> - This Presentation</h5>
           <h5 class="smallish"><a href="https://facebook.github.io/react-native">https://facebook.github.io/react-native</a> - Source code</h5>
           <h5 class="smallish"><a href="http://www.reactnative.com">http://www.reactnative.com</a> - Community</h5>
           <h5 class="smallish"><a href="https://goo.gl/03PSvp">https://goo.gl/03PSv</a> - React Conf 2016 Videos</h5>
+        </section>
+        <section data-background="http://cdn.meme.am/instances2/500x/4685402.jpg" data-background-size="contain">
         </section>
       </div>
     </div>
