@@ -9,12 +9,12 @@
     <div class="reveal">
       <div class="slides">
         <section>
-          <h2>React Native</h2>
+          <h1>React Native</h1>
           <h4><i>It's like ReactJS, but completely different!</i></h4>
         </section>
         <section>
           <section>
-            <h3>How it works</h3>
+            <h2>How it works</h2>
             <p class="fragment"><i>Magic!</i></p>
           </section>
           <section>
@@ -43,7 +43,7 @@
             </code></pre>
           </section>
           <section>
-            <h3>HTML Components, Native equivalent</h3>
+            <h2>HTML Components, Native equivalent</h2>
             <ul>
               <li class="fragment">p &rarr; Text</li>
               <li class="fragment">input &rarr; TextInput</li>
@@ -61,7 +61,7 @@
             </ul>
           </section>
           <section>
-            <h3>Better HTML Components!</h3>
+            <h2>Better HTML Components!</h2>
             <ul>
               <li class="fragment">ListView</li>
               <li class="fragment">MapView</li>
@@ -76,7 +76,7 @@
         </section>
         <section>
           <section>
-            <h3>Building with <i>react-native</i></h3>
+            <h2>Building with <i>react-native</i></h2>
           </section>
           <section>
             <pre><code class="javascript">
@@ -100,7 +100,7 @@
             </code></pre>
           </section>
           <section>
-            <h3>Run it!</h3>
+            <h2>Run it!</h2>
             <pre><code class="bash">
               react-native run-android    # (or through XCode for iOS)
             </code></pre>
@@ -108,18 +108,18 @@
         </section>
         <section>
           So,
-          <h3 class="fragment">How <i>should</i> we be using react-native?</h3>
+          <h2>How <i>should</i> we be using react-native?</h2>
         </section>
         <section>
           <section>
-            <h3>Navigation</h3>
+            <h2>Navigation</h2>
             <ol>
               <li class="fragment">&lt;Navigator /&gt;</li>
               <li class="fragment"><i>react-native-router-flux</i></li>
             </ol>
           </section>
           <section>
-            <h3>Navigator - Built into React-Native</h3>
+            <h2>Navigator - Built into React-Native</h2>
             <pre class="fragment"><code class="javascript">
               &lt;Navigator
                   initialRoute={Routes.Login()}
@@ -133,7 +133,7 @@
             </code></pre>
           </section>
           <section>
-            <h3><i>react-native-router-flux</i></h3>
+            <h2><i>react-native-router-flux</i></h2>
             <pre class="fragment"><code class="html">
               &lt;Router navigationBarStyle={styles.navbar}&gt;
                   &lt;Schema name="default" sceneConfig={Navigator.SceneConfigs.FloatFromRight}
@@ -152,7 +152,7 @@
         </section>
         <section>
           <section>
-            <h3>Native Code</h3>
+            <h2>Native Code</h2>
             <p>Has to be done more often than you would think!</p>
           </section>
           <section>
@@ -200,10 +200,10 @@
         </section>
         <section>
           <section>
-            <h3>Styling</styles>
+            <h2>Styling</h2>
           </section>
           <section>
-            <h3>How are styles handled?</h3>
+            <h2>How are styles handled?</h2>
             <pre class="fragment"><code class="javascript">
               const styles = StyleSheet.create({
                   darkFont: {
@@ -216,7 +216,7 @@
             </code></pre>
           </section>
           <section>
-            <h3>Layout</h3>
+            <h2>Layout</h2>
             <p>Custom implementation of Flexbox</p>
             <ul>
               <li>Not all of flexbox is supported</li>
@@ -224,7 +224,7 @@
             </ul>
           </section>
           <section>
-            <h3>Global Styles? <span class="fragment">No</span></h3>
+            <h2>Global Styles? <span class="fragment">No</span></h2>
             <ul>
               <li class="fragment">Not necessary</li>
               <li class="fragment">Not easy:
@@ -243,7 +243,7 @@
             </ul>
           </section>
           <section>
-            <h3>If you have to do global styles...</h3>
+            <h2>If you have to do global styles...</h2>
             <pre class="fragment"><code class="javascript">
               export function extendStylesheet(stylesheet) {
                   return StyleSheet.create(_.merge(globalStyles, stylesheet));
@@ -251,7 +251,7 @@
             </code></pre>
           </section>
           <section>
-            <h3>Variables and Styles</h3>
+            <h2>Variables and Styles</h2>
             <ol>
               <li class="fragment">Immutable.js</li>
               <li class="fragment">Const exports</li>
@@ -277,11 +277,11 @@
         </section>
         <section>
           <section>
-          <h5>So, now the tricky bit...</h5>
-          <h3 class="fragment"><strong>Tests!</strong></h3>
+            <h5>So, now the tricky bit...</h5>
+            <h2 class="fragment"><strong>Tests!</strong></h2>
           </section>
           <section>
-            <h3>React Native Components</h3>
+            <h2>React Native Components</h2>
             <ul>
               <li class="fragment"><i>react-native-mock</i>
                 <ul>
@@ -296,7 +296,7 @@
             </code></pre>
           </section>
           <section>
-            <h3>React Native APIs</h3>
+            <h2>React Native APIs</h2>
             <ul>
               <li class="fragment">dismissKeyboard</li>
               <li class="fragment">Platform</li>
@@ -307,7 +307,7 @@
             </code></pre>
           </section>
           <section>
-            <h3>Testing Tools</h3>
+            <h2>Testing Tools</h2>
             <ul>
               <li class="fragment">Mocha etc...</li>
               <li class="fragment">Mockery</li>
