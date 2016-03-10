@@ -9,6 +9,9 @@ Reveal.initialize({
   history: true,
   center: true,
 
+  width: 1500,
+  height: 800,
+
   transition: 'slide',
 
   dependencies: [
