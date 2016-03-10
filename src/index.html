@@ -171,7 +171,7 @@
               public List&lt;NativeModule&gt; createNativeModules(
                                           ReactApplicationContext reactContext) {
                 List&lt;NativeModule&gt; modules = new ArrayList&lt;&gt;();
-                modules.add(new SpotifyModule(reactContext, mActivity));
+                modules.add(new MyNativeModule(reactContext));
                 return modules;
               }
             </code></pre>
