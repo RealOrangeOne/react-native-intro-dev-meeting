@@ -23,7 +23,7 @@
               class Foo extends React.Component {
                 render() {
                   return (
-                    &lt;a href="//google.com"&gt;
+                    &lt;a href="//google.co.uk"&gt;
                       &lt;p&gt;some text&lt;/p&gt;
                     &lt;/a&gt;
                   );
@@ -32,6 +32,10 @@
             </code></pre>
             <pre class="fragment"><p>Not entirely...</p><code class="javascript">
               class FooNative extends React.Component {
+                _handlePress() {
+                  const platformMethod = Platform.OS === 'ios' ? LinkingIOS : IntentAndroid;
+                  platformMethod.openURL('https://google.co.uk');
+                }
                 render(){
                   return (
                     &lt;TouchableHighlight onPress={this._handlePress}&gt;
