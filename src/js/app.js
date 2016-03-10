@@ -14,13 +14,9 @@ Reveal.initialize({
 
   transition: 'slide',
 
-  dependencies: [
-    {
-      src: 'js/plugin/highlight/highlight.js',
-      async: true,
-      callback: function() {
-        hljs.initHighlightingOnLoad();
-      }
-    },
-  ]
+  dependencies: [{
+    src: 'js/plugin/highlight/highlight.js',
+    async: true,
+    callback: () => hljs.initHighlightingOnLoad()
+  }]
 });
