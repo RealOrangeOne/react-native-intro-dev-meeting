@@ -12,7 +12,8 @@
     "build-js": "./scripts/build-js.sh",
     "build-less": "lessc --silent src/less/style.less build/css/style.css",
     "build-html": "cp src/index.html build/index.html",
-    "build": "npm run create-build-dirs && npm run build-js && npm run build-less && npm run build-html"
+    "build-img": "cp -r src/img build/img",
+    "build": "npm run create-build-dirs && npm run build-img && npm run build-js && npm run build-less && npm run build-html"
   },
   "author": "Jake Howard",
   "devDependencies": {
