@@ -13,6 +13,7 @@ Reveal.initialize({
   height: 800,
 
   transition: 'slide',
+  backgroundTransition: 'zoom',
 
   dependencies: [{
     src: 'js/plugin/highlight/highlight.js',
