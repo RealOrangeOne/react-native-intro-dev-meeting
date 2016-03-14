@@ -8,7 +8,7 @@
     "test": "npm run lint",
     "create-build-dirs": "mkdir -p build/js build/css",
     "start": "scripts/server.js",
-    "build-publish": "./scripts/publish.sh",
+    "build-publish": "./scripts/prepublish.sh",
     "build-js": "./scripts/build-js.sh",
     "build-less": "lessc --silent src/less/style.less build/css/style.css",
     "build-html": "cp src/index.html build/index.html",

@@ -22,5 +22,5 @@ deployment:
   master:
     branch: master
     commands:
-      - ./scripts/publish.sh
+      - npm run build-publish
       - ./scripts/deploy.sh
