@@ -23,7 +23,7 @@
               class Foo extends React.Component {
                 render() {
                   return (
-                    &lt;a href="//google.co.uk"&gt;
+                    &lt;a href="//hooli.xyz"&gt;
                       &lt;p&gt;some text&lt;/p&gt;
                     &lt;/a&gt;
                   );
@@ -34,7 +34,7 @@
               class FooNative extends React.Component {
                 _handlePress() {
                   const platformMethod = Platform.OS === 'ios' ? LinkingIOS : IntentAndroid;
-                  platformMethod.openURL('https://google.co.uk');
+                  platformMethod.openURL('https://hooli.xyz');
                 }
                 render(){
                   return (
@@ -87,11 +87,11 @@
               import React from 'react-native';
               const { Image, Text, View, AppRegistry } = React;
 
-              class App extends React.Component{
+              class MyApp extends React.Component{
                 render() {
                   return (
                     &lt;View style={styles.row}&gt;
-                      &lt;Image source={{uri: 'http://facebook.github.io/react/img/logo_og.png'}} style={styles.image} /&gt;
+                      &lt;Image source={{uri: 'http://www.feistees.com/wp-content/uploads/2014/05/squpd.jpg'}} style={styles.image} /&gt;
                       &lt;View style={styles.text}&gt;
                         &lt;Text style={styles.title}&gt;React Native &lt;/Text&gt;
                         &lt;Text style={styles.subtitle}&gt;Build high quality mobile apps using React &lt;/Text&gt;
@@ -100,7 +100,7 @@
                   );
                 }
               });
-              AppRegistry.registerComponent('Pied_Piper', () => App);
+              AppRegistry.registerComponent('Pied_Piper', () => MyApp);
             </code></pre>
           </section>
           <section>
@@ -163,11 +163,15 @@
             <pre class="fragment">MyNativeModule.java<code class="java">
               @Override
               public String getName() {
-                return "NativeStuff";
+                return "ThisModule";
               }
               @ReactMethod
               public void doCoolStuff() {
-                  System.out.println("Look, Cool things!");
+                System.out.print("Shw");
+                for(int i=1; i&lt;999; i++) {
+                  System.out.print("a");
+                 }
+                System.out.println("g");
               }
             </code></pre>
             <pre class="fragment">MyNativePackage.java<code class="java">
@@ -192,7 +196,7 @@
           <section>
             <pre><code class="javascript">
               import { NativeModules } from 'react-native';
-              NativeModules.NativeStuff.doCoolStuff();
+              NativeModules.ThisModule.doCoolStuff();
             </code></pre>
             <ul>
               <li class="fragment pos">Native</li>
@@ -212,13 +216,13 @@
             <h2>How are styles handled?</h2>
             <pre class="fragment"><code class="javascript">
               const styles = StyleSheet.create({
-                  darkFont: {
+                  dafont: {
                       backgroundColor: '#FF7F00',
                   },
               });
             </code></pre>
             <pre class="fragment"><code class="html">
-              &lt;Text style={styles.darkFont}&gt;Some Content&lt;/Text&gt;
+              &lt;Text style={styles.dafont}&gt;This Guy!&lt;/Text&gt;
             </code></pre>
           </section>
           <section>
@@ -391,6 +395,8 @@
         </section>
         <section data-background="https://i.imgflip.com/10k8i4.jpg" data-background-size="contain">
           <h1 class="dark italic strong fragment">Tah-da!</h1>
+        </section>
+        <section data-background="https://media.giphy.com/media/UgK1SGP79gzew/giphy.gif" data-background-size="contain">
         </section>
       </div>
     </div>
