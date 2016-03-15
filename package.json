@@ -26,6 +26,7 @@
     "eslint-config": "git://github.com/dabapps/eslint-config.git",
     "eslint-plugin-react": "=4.1.0",
     "less": "=2.6.0",
+    "open": "0.0.5",
     "uglify-js": "=2.6.2"
   },
   "dependencies": {
