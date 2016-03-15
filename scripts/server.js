@@ -2,7 +2,7 @@
 
 const connect = require('connect');
 const serveStatic = require('serve-static');
-var open = require('open');
+const open = require('open');
 
 
 const SERVE_DIR = __dirname + '/../build';
