@@ -108,6 +108,14 @@
               react-native run-android    # (or through XCode for iOS)
             </code></pre>
           </section>
+          <section>
+            <h3>Logs?</h3>
+            <pre><code class="bash">
+              adb logcat | grep ReactNative
+              adb logcat *:S ReactNative:V ReactNativeJS:V  # from react-native docs
+            </code></pre>
+            <h4 class="fragment">iOS logs are done through XCode</h4>
+          </section>
         </section>
         <section>
           So,
