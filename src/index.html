@@ -269,6 +269,28 @@
             </code></pre>
           </section>
           <section>
+            <h2>Modules to the rescue!</h2>
+            <pre><code class="bash">
+              npm install react-native-extended-stylesheet --save
+            </code></pre>
+            <pre class="fragment"><code class="javascript">
+              EStyleSheet.build({
+                  textColor: '#FF7F00'  // pass variables for styling
+              });
+            </code></pre>
+            <pre class="fragment"><code class="javascript">
+              const styles = EStyleSheet.create({
+                  column: {
+                      width: '10%'  // percentage of screen width
+                  },
+                  text: {
+                      color: '$textColor',  // use variable $textColor
+                      fontSize: '3rem'  // use relative unit - CSS3 rem
+                  }
+              });
+            </code></pre>
+          </section>
+          <section>
             <h2>Variables and Styles</h2>
             <ol>
               <li class="fragment">Immutable.js</li>
