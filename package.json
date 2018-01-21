@@ -10,7 +10,7 @@
     "start": "scripts/server.js",
     "build-publish": "./scripts/prepublish.sh",
     "build-js": "./scripts/build-js.sh",
-    "build-less": "lessc --silent src/less/style.less build/css/style.css",
+    "build-less": "lessc src/less/style.less build/css/style.css",
     "build-html": "cp src/index.html build/index.html",
     "build-img": "cp -r src/img build/img",
     "build": "npm run create-build-dirs && npm run build-img && npm run build-js && npm run build-less && npm run build-html"
@@ -25,7 +25,7 @@
     "eslint": "=1.10.3",
     "eslint-config": "git://github.com/dabapps/eslint-config.git",
     "eslint-plugin-react": "=4.1.0",
-    "less": "=2.6.0",
+    "less": "=2.7.3",
     "open": "0.0.5",
     "uglify-js": "=2.6.2"
   },
